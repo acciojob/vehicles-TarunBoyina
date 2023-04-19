@@ -1,9 +1,14 @@
 package com.driver;
 
+
+
+
 public class Vehicle {
+
 
     private String name;
     private int currentSpeed;
+    private int currentDirection;
 
     public String getName() {
         return name;
@@ -29,34 +34,32 @@ public class Vehicle {
         this.currentDirection = currentDirection;
     }
 
-    public Vehicle(String name, int currentSpeed, int currentDirection) {
-        this.name = name;
-        this.currentSpeed = currentSpeed;
-        this.currentDirection = currentDirection;
+    public Vehicle(String name)
+    {
+        // constructor initialiser
+        this.name=name;
+        this.currentSpeed=0;
+        this.currentDirection=0;
     }
 
-    private int currentDirection;
-
-    public Vehicle(String name) {
-this.name = name;
-this.currentDirection =0;
-this.currentDirection = 0;
-    }
-
-    public void steer(int direction){
-        //direction is in degrees, add it to the current direction
+    public void steer(int direction)
+    {
         this.currentDirection += direction;
+        //direction is in degrees, add it to the current direction
         System.out.println("steer method called - The direction is changed to: " + currentDirection + " degrees");
     }
 
-    public void move(int speed, int direction){
-this.currentDirection =speed;
-this.currentDirection = direction;
-System.out.println("move method called - The speed is changed to: " + currentSpeed + ", and the direction is changed to: " + currentDirection + " degrees");
+    public void move(int speed, int direction)
+    {
+        this.currentSpeed = speed;
+        this.currentDirection = direction;
+        //set the values of currentSpeed and currentDirection
+        System.out.println("move method called - The speed is changed to: " + currentSpeed + ", and the direction is changed to: " + currentDirection + " degrees");
     }
 
-    public void stop(){
-this.currentDirection = 0;
+    public void stop()
+    {
+        this.currentSpeed=0;
         System.out.println("stop method called - The vehicle is stopped");
     }
 
