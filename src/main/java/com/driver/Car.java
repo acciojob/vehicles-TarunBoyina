@@ -5,7 +5,7 @@ public class Car extends Vehicle {
     private String type;
     private int doors;
 
-    public Car(String name, int currentSpeed, int currentDirection, int wheels, boolean isManual, int currentGear) {
+    public Car(String name, int currentSpeed, int currentDirection, int wheels, boolean isManual,String s, int currentGear) {
         super(name, currentSpeed, currentDirection);
         this.wheels = wheels;
         this.type = type;
